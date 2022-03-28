@@ -1383,6 +1383,7 @@ type ResponseCheckTx struct {
 	GasUsed   int64           `protobuf:"varint,6,opt,name=gas_used,json=gasUsed,proto3" json:"gas_used,omitempty"`
 	Tags      []common.KVPair `protobuf:"bytes,7,rep,name=tags" json:"tags,omitempty"`
 	Fee       common.KI64Pair `protobuf:"bytes,8,opt,name=fee" json:"fee"`
+	isOracleTx bool           `protobuf:"varint,9,opt,name=is_oracle_tx" json:"is_oracle_tx,omitempty"`
 }
 
 func (m *ResponseCheckTx) Reset()                    { *m = ResponseCheckTx{} }
